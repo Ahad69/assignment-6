@@ -18,7 +18,7 @@ export default function Home({ myParts }) {
       <Layout>
         <Sliders />
 
-        <div className="w-[1280px] m-auto">
+        <div className="sm:w-[1280px] m-auto">
           <br />
           <br />
           <h1 className="text-center text-4xl text-cyan-900">
@@ -26,7 +26,7 @@ export default function Home({ myParts }) {
           </h1>
           <p className="text-center">Choose best parts for your PC</p>
           <br />
-          <div className="grid grid-cols-4 gap-4 overflow-hidden ">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 overflow-hidden ">
             <Cards parts={myParts} />
           </div>
         </div>

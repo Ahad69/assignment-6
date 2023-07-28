@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .ant-btn {
-  background: #0e5e94;
+  background: #0e7490;
 }
 .ant-btn-icon {
   font-size: 25px;
@@ -20,4 +20,13 @@
 .ant-menu-item:hover {
   background: #f5f5f5;
   color: #0e5e94;
+}
+.ant-ribbon-placement-end {
+  inset-inline-end: -2px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .ant-ribbon-placement-end {
+    inset-inline-end: 6px !important;
+  }
 }

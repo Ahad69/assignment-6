@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Category = () => {
   return (
-    <div className="w-[700px] m-auto mb-5">
+    <div className="w-[350px] sm:w-[700px] m-auto mb-5">
       <br />
       <br />
       <h1 className="text-center text-4xl text-cyan-900">
@@ -46,7 +46,7 @@ const Category = () => {
           </h1>
         </Link>
         <Link
-          href={"/Power Supply Unit"}
+          href={"/PowerSupplyUnit"}
           className="w-[150px] border hover:border-cyan-900  hover:text-cyan-900 cursor-pointer"
         >
           <BiLogoUnity className="text-[100px] m-auto" />
@@ -55,7 +55,7 @@ const Category = () => {
           </h1>
         </Link>
         <Link
-          href={"/Storage Device"}
+          href={"/StorageDevice"}
           className="w-[150px] border hover:border-cyan-900  hover:text-cyan-900 cursor-pointer"
         >
           <MdStorage className="text-[100px] m-auto" />

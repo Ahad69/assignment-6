@@ -20,8 +20,8 @@ const Navbar = () => {
       getItem("CPU/Processor", "CPU/Processor"),
       getItem("Motherboard", "Motherboard"),
       getItem("RAM", "RAM"),
-      getItem("Power Supply Unit", "Power Supply Unit"),
-      getItem("Storage Device", "Storage Device"),
+      getItem("Power Supply Unit", "PowerSupplyUnit"),
+      getItem("Storage Device", "StorageDevice"),
       getItem("Monitor", "Monitor"),
       getItem("Others", "Others"),
     ]),
@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <div className="shadow-lg shadow-blue-800/20  z-50 mb-3">
-      <ul className="w-[1280px] m-auto  h-[50px]  font-bold">
+      <ul className="sm:w-[1280px] m-auto  h-[50px]  font-bold">
         <Menu
           theme={"white"}
           className="bg-white overflow-visible z-auto"
