@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Layout from "@/components/layout/layout";
 import Cards from "@/components/cards/cards";
-
-const inter = Inter({ subsets: ["latin"] });
+import Sliders from "@/components/slider/slider";
+import Category from "@/components/categorySection/category";
 
 export default function Home({ myParts }) {
   return (
@@ -16,8 +16,22 @@ export default function Home({ myParts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <img src="https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=" />
-        <Cards parts={myParts} />
+        <Sliders />
+
+        <div className="w-[1280px] m-auto">
+          <br />
+          <br />
+          <h1 className="text-center text-4xl text-cyan-900">
+            Our Featured Products
+          </h1>
+          <p className="text-center">Choose best parts for your PC</p>
+          <br />
+          <div className="grid grid-cols-4 gap-4 overflow-hidden ">
+            <Cards parts={myParts} />
+          </div>
+        </div>
+
+        <Category />
       </Layout>
     </>
   );

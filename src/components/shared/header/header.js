@@ -4,6 +4,7 @@ import { SlLogin } from "react-icons/sl";
 import { BsCart2 } from "react-icons/bs";
 import { Badge, Input } from "antd";
 import style from "./header.module.css";
+import Link from "next/link";
 const { Search } = Input;
 
 const Header = () => {
@@ -12,13 +13,15 @@ const Header = () => {
   return (
     <div className="w-full">
       <div className="w-[1280px] m-auto flex justify-between items-center">
-        <Image
-          width={200}
-          height={70}
-          className="w-[150px] h-[70px]"
-          src={"/logo.png"}
-          alt="logo"
-        />
+        <Link href={"/"}>
+          <Image
+            width={200}
+            height={70}
+            className="w-[150px] h-[70px]"
+            src={"/logo.png"}
+            alt="logo"
+          />
+        </Link>
         <Search
           className="w-[400px]"
           placeholder="Search..."

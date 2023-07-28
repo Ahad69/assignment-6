@@ -1,0 +1,39 @@
+.container {
+  width: 1280px;
+  margin: auto;
+}
+.images {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.images img {
+  width: 100%;
+  height: 500px;
+}
+
+.prevsArrow {
+  position: absolute;
+  top: 47%;
+  left: 0;
+  z-index: 999;
+}
+.nextsArrow {
+  position: absolute;
+  top: 47%;
+  right: 0;
+}
+
+@media only screen and (max-width: 776px) {
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  .images {
+    height: 300px;
+  }
+  .images img {
+    width: 100%;
+    height: 300px;
+  }
+}

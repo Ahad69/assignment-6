@@ -32,7 +32,7 @@ const Navbar = () => {
       <ul className="w-[1280px] m-auto  h-[50px]  font-bold">
         <Menu
           theme={"white"}
-          className="bg-white"
+          className="bg-white overflow-visible z-auto"
           onClick={onClick}
           style={{
             width: 256,
