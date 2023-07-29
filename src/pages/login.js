@@ -77,9 +77,7 @@ const Login = () => {
           className="text-5xl p-1 cursor-pointer"
           onClick={() =>
             signIn("github", {
-              callbackUrl: `${
-                router?.query?.callbackUrl ? router?.query?.callbackUrl : "/"
-              }`,
+              callbackUrl: "https://assignment-6-one.vercel.app/",
             })
           }
         />
