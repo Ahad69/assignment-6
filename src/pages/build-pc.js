@@ -1,5 +1,6 @@
 import BuilderPage from "@/components/buildSection";
 import Layout from "@/components/layout/layout";
+import { message } from "antd";
 import React from "react";
 import { useSelector } from "react-redux";
 
@@ -32,7 +33,15 @@ const BuildPc = () => {
             <br />
             Total Price : ${totalPrice} <br />
             {categoryCount > 5 ? (
-              <button className="bg-green-500 text-white  px-2">
+              <button
+                className="bg-green-500 text-white  px-2"
+                onClick={() =>
+                  message.open({
+                    type: "success",
+                    content: "This is a success message",
+                  })
+                }
+              >
                 Complete Build
               </button>
             ) : (

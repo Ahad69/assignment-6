@@ -1,45 +1,44 @@
-import { Dropdown, Menu } from "antd";
+import { Collapse, Dropdown, Menu } from "antd";
 import React from "react";
+import style from "./nav.module.css";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
-  const onClick = ({ key }) => {
-    console.log(key);
-    // router.push(`/services/${key}`);
-  };
+  const router = useRouter();
 
-  function getItem(label, key, children, type) {
-    return {
-      key,
-      children,
-      label,
-      type,
-    };
-  }
-  const items = [
-    getItem("Categories", "sub1", [
-      getItem("CPU/Processor", "CPU/Processor"),
-      getItem("Motherboard", "Motherboard"),
-      getItem("RAM", "RAM"),
-      getItem("Power Supply Unit", "PowerSupplyUnit"),
-      getItem("Storage Device", "StorageDevice"),
-      getItem("Monitor", "Monitor"),
-      getItem("Others", "Others"),
-    ]),
+  const menu = [
+    { key: 1, name: "Processor", value: "Processor" },
+    { key: 2, name: "Motherboard", value: "Motherboard" },
+    { key: 3, name: "RAM", value: "RAM" },
+    { key: 4, name: "Power Supply Unit", value: "PowerSupplyUnit" },
+    { key: 5, name: "Storage Device", value: "StorageDevice" },
+    { key: 6, name: "Monitor", value: "Monitor" },
+    { key: 7, name: "Others", value: "Others" },
   ];
+
+  const onSelectMenu = (value) => {
+    console.log(value);
+
+    router.push(`/${value}`);
+  };
 
   return (
     <div className="shadow-lg shadow-blue-800/20  z-50 mb-3">
-      <ul className="sm:w-[1280px] m-auto  h-[50px]  font-bold">
-        <Menu
-          theme={"white"}
-          className="bg-white overflow-visible z-auto"
-          onClick={onClick}
-          style={{
-            width: 256,
-          }}
-          mode="inline"
-          items={items}
-        />
+      <ul className="sm:w-[1280px] m-auto  h-[50px]  font-bold flex items-center">
+        <div className={style.dropdown}>
+          <span>Categories</span>
+          <ul class={style.dropdownContent}>
+            {menu.map((a) => (
+              <li
+                className="cursor-pointer hover:bg-gray-100 p-1 rounded"
+                onClick={() => onSelectMenu(a.value)}
+                key={a.key}
+              >
+                {a.name}
+              </li>
+            ))}
+          </ul>
+        </div>
       </ul>
     </div>
   );
