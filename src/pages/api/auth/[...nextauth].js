@@ -14,8 +14,8 @@ export const authOptions = {
     }),
   ],
   pages: {
-    signIn: "/login",
-    error: "/login",
+    signIn: "https://assignment-6-one.vercel.app/login",
+    error: "https://assignment-6-one.vercel.app/login",
   },
 };
 
