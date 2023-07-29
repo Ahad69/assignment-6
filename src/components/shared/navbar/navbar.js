@@ -2,6 +2,10 @@ import { Collapse, Dropdown, Menu } from "antd";
 import React from "react";
 import style from "./nav.module.css";
 import { useRouter } from "next/router";
+import { BiSolidChevronDown } from "react-icons/bi";
+import { signOut, useSession } from "next-auth/react";
+import { SlLogin } from "react-icons/sl";
+import Link from "next/link";
 
 const Navbar = () => {
   const router = useRouter();
@@ -17,16 +21,19 @@ const Navbar = () => {
   ];
 
   const onSelectMenu = (value) => {
-    console.log(value);
-
     router.push(`/${value}`);
   };
 
+  const { data: session } = useSession();
+
   return (
     <div className="shadow-lg shadow-blue-800/20  z-50 mb-3">
-      <ul className="sm:w-[1280px] m-auto  h-[50px]  font-bold flex items-center">
+      <ul className="sm:w-[1280px] m-auto  h-[50px]  font-bold flex items-center justify-between">
         <div className={style.dropdown}>
-          <span>Categories</span>
+          <span className="flex items-center">
+            Categories <BiSolidChevronDown className="ml-5 " />
+          </span>
+
           <ul class={style.dropdownContent}>
             {menu.map((a) => (
               <li
@@ -38,6 +45,19 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+        </div>
+        <div className="mr-3 sm:hidden block">
+          {session ? (
+            <img
+              className="w-12 rounded-full cursor-pointer"
+              src={session.user.image}
+              onClick={() => signOut()}
+            />
+          ) : (
+            <Link href={"/login"}>
+              <SlLogin className="text-2xl" />
+            </Link>
+          )}
         </div>
       </ul>
     </div>

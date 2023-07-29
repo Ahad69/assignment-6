@@ -27,7 +27,7 @@ const BuilderCategory = ({ myParts }) => {
   return (
     <Layout>
       <div className={style.container}>
-        <div className="bg-white w-[300px] overflow-hidden">
+        <div className="bg-white w-11/12 sm:w-[300px] sm:m-0 m-auto">
           <div className="p-2">
             <h1 className="text-lg font-bold">Stock</h1>
             <hr />
@@ -39,7 +39,7 @@ const BuilderCategory = ({ myParts }) => {
             />
           </div>
         </div>
-        <div className="w-[1000px]">
+        <div className="sm:w-[1000px]">
           <div className="bg-white mb-5 h-[40px] flex justify-between items-center px-2">
             <p className="font-bold">
               {router?.query?.category?.split("&")[0]}
@@ -48,7 +48,7 @@ const BuilderCategory = ({ myParts }) => {
               Showing Items - <b>{myParts?.length}</b>{" "}
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-4 overflow-hidden pb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 overflow-hidden pb-10">
             <Cards parts={myParts} params={router?.asPath?.split("/")[1]} />
           </div>
         </div>

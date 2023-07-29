@@ -24,7 +24,7 @@ const Cards = ({ parts, params }) => {
                   alt=""
                   height={150}
                   width={550}
-                  className="p-5  hover:scale-110 overflow-hidden   ease-in duration-300 h-[200px] "
+                  className="p-5  hover:scale-110 overflow-hidden   ease-in duration-300 h-[250px] "
                   src={a.Image?.[0]}
                 />
               }
@@ -57,7 +57,7 @@ const Cards = ({ parts, params }) => {
                     alt=""
                     height={150}
                     width={550}
-                    className="p-5  hover:scale-110 overflow-hidden   ease-in duration-300 h-[200px] "
+                    className="p-5  hover:scale-110 overflow-hidden   ease-in duration-300 sm:h-[250px] "
                     src={a.Image?.[0]}
                   />
                 }

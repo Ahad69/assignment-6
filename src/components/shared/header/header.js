@@ -39,7 +39,7 @@ const Header = () => {
           enterButton
         />
         <div className="flex justify-between items-center w-[400px]">
-          <Link href={"/login"} className="hidden sm:block">
+          <div className="hidden sm:block">
             <div className="flex justify-between items-center w-[120px] p-1">
               {session ? (
                 <>
@@ -48,23 +48,28 @@ const Header = () => {
                     <h1 className="font-bold">
                       {session?.user?.name?.split(" ")[0]}
                     </h1>
-                    <p className="text-xs" onClick={() => signOut()}>
+                    <p
+                      className="text-xs cursor-pointer"
+                      onClick={() => signOut()}
+                    >
                       Log Out
                     </p>
                   </div>
                 </>
               ) : (
-                <>
-                  {" "}
-                  <SlLogin className="text-2xl" />
+                <Link
+                  href={"/login"}
+                  className="flex justify-between items-center "
+                >
+                  <SlLogin className="text-2xl mr-2" />
                   <div>
                     <h1 className="font-bold">Account</h1>
                     <p className="text-xs">Login/Register</p>
                   </div>
-                </>
+                </Link>
               )}
             </div>
-          </Link>
+          </div>
           <div className="ml-20 sm:ml-0">
             <Link href={"/build-pc"}>
               <button className={style.buildPC}>PC Builder</button>

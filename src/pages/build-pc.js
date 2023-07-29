@@ -25,8 +25,8 @@ const BuildPc = () => {
   console.log(categoryCount);
   return (
     <Layout>
-      <div className="w-[1200px] m-auto bg-white">
-        <div className="flex justify-between items-center">
+      <div className="sm:w-[1200px] m-auto bg-white">
+        <div className="flex sm:justify-between items-center ">
           <img className="w-[200px]" src="/logo.png" />
           <div className="w-[180px] border text-center h-[80px] text-black rounded">
             Parts Selected : {categoryCount}

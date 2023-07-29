@@ -21,15 +21,31 @@ const BuilderPage = ({ builderData }) => {
           <h1>
             Processor<span className="text-red-600">*</span>
           </h1>
+
+          {builderData.Processor ? (
+            <button
+              className="sm:hidden block m-auto mt-2"
+              onClick={() => dispatch(removeBuilder("Processor"))}
+            >
+              <ImCross className="text-red-400" />
+            </button>
+          ) : (
+            ""
+          )}
         </div>
-        <div className=" w-[300px] p-1">
+        <div className=" sm:w-[300px] p-1">
           {builderData.Processor
             ? builderData.Processor.map((a) => (
-                <div key={a._id} className="flex justify-between border">
-                  <img className="w-24" src={a.Image?.[0]} />
+                <div
+                  key={a._id}
+                  className="flex flex-col  sm:flex-row sm:justify-between border"
+                >
+                  <img className="w-24 m-auto sm:m-0" src={a.Image?.[0]} />
 
                   <div>
-                    <h1>{a.ProductName.slice(0, 20)}</h1>
+                    <h1 className="sm:text-base text-xs">
+                      {a.ProductName.slice(0, 20)}
+                    </h1>
                     <Rate
                       disabled
                       defaultValue={a?.AverageRating}
@@ -42,8 +58,11 @@ const BuilderPage = ({ builderData }) => {
             : ""}
         </div>
         {builderData.Processor ? (
-          <button onClick={() => dispatch(removeBuilder("Processor"))}>
-            <ImCross />
+          <button
+            className="hidden sm:block"
+            onClick={() => dispatch(removeBuilder("Processor"))}
+          >
+            <ImCross className="text-red-400" />
           </button>
         ) : (
           <Link
@@ -61,15 +80,31 @@ const BuilderPage = ({ builderData }) => {
           <h1>
             Motherboard<span className="text-red-600">*</span>
           </h1>
+
+          {builderData.Motherboard ? (
+            <button
+              className="sm:hidden block m-auto mt-2"
+              onClick={() => dispatch(removeBuilder("Motherboard"))}
+            >
+              <ImCross className="text-red-400" />
+            </button>
+          ) : (
+            ""
+          )}
         </div>
-        <div className=" w-[300px] p-1">
+        <div className=" sm:w-[300px] p-1">
           {builderData.Motherboard
             ? builderData.Motherboard.map((a) => (
-                <div key={a._id} className="flex justify-between border">
-                  <img className="w-24" src={a.Image?.[0]} />
+                <div
+                  key={a._id}
+                  className="flex flex-col  sm:flex-row sm:justify-between border"
+                >
+                  <img className="w-24 m-auto sm:m-0" src={a.Image?.[0]} />
 
                   <div>
-                    <h1>{a.ProductName.slice(0, 20)}</h1>
+                    <h1 className="sm:text-base text-xs">
+                      {a.ProductName.slice(0, 20)}
+                    </h1>
                     <Rate
                       disabled
                       defaultValue={a?.AverageRating}
@@ -82,8 +117,11 @@ const BuilderPage = ({ builderData }) => {
             : ""}
         </div>
         {builderData.Motherboard ? (
-          <button onClick={() => dispatch(removeBuilder("Motherboard"))}>
-            <ImCross />
+          <button
+            className="hidden sm:block"
+            onClick={() => dispatch(removeBuilder("Motherboard"))}
+          >
+            <ImCross className="text-red-400" />
           </button>
         ) : (
           <Link
@@ -100,15 +138,30 @@ const BuilderPage = ({ builderData }) => {
           <h1>
             RAM<span className="text-red-600">*</span>
           </h1>
+          {builderData.RAM ? (
+            <button
+              className="sm:hidden block m-auto mt-2"
+              onClick={() => dispatch(removeBuilder("RAM"))}
+            >
+              <ImCross className="text-red-400" />
+            </button>
+          ) : (
+            ""
+          )}
         </div>
-        <div className=" w-[300px] p-1">
+        <div className=" sm:w-[300px] p-1">
           {builderData.RAM
             ? builderData.RAM.map((a) => (
-                <div key={a._id} className="flex justify-between border">
-                  <img className="w-24" src={a.Image?.[0]} />
+                <div
+                  key={a._id}
+                  className="flex flex-col  sm:flex-row sm:justify-between border"
+                >
+                  <img className="w-24 m-auto sm:m-0" src={a.Image?.[0]} />
 
                   <div>
-                    <h1>{a.ProductName.slice(0, 20)}</h1>
+                    <h1 className="sm:text-base text-xs">
+                      {a.ProductName.slice(0, 20)}
+                    </h1>
                     <Rate
                       disabled
                       defaultValue={a?.AverageRating}
@@ -122,8 +175,11 @@ const BuilderPage = ({ builderData }) => {
         </div>
 
         {builderData.RAM ? (
-          <button onClick={() => dispatch(removeBuilder("RAM"))}>
-            <ImCross />
+          <button
+            className="hidden sm:block"
+            onClick={() => dispatch(removeBuilder("RAM"))}
+          >
+            <ImCross className="text-red-400" />
           </button>
         ) : (
           <Link
@@ -140,16 +196,31 @@ const BuilderPage = ({ builderData }) => {
           <h1>
             {" "}
             Power Supply<span className="text-red-600">*</span>
-          </h1>
+          </h1>{" "}
+          {builderData.PowerSupplyUnit ? (
+            <button
+              className="sm:hidden block m-auto mt-2"
+              onClick={() => dispatch(removeBuilder("PowerSupplyUnit"))}
+            >
+              <ImCross className="text-red-400" />
+            </button>
+          ) : (
+            ""
+          )}
         </div>
-        <div className=" w-[300px] p-1">
+        <div className=" sm:w-[300px] p-1">
           {builderData.PowerSupplyUnit
             ? builderData.PowerSupplyUnit.map((a) => (
-                <div key={a._id} className="flex justify-between border">
-                  <img className="w-24" src={a.Image?.[0]} />
+                <div
+                  key={a._id}
+                  className="flex flex-col  sm:flex-row sm:justify-between border"
+                >
+                  <img className="w-24 m-auto sm:m-0" src={a.Image?.[0]} />
 
                   <div>
-                    <h1>{a.ProductName.slice(0, 20)}</h1>
+                    <h1 className="sm:text-base text-xs">
+                      {a.ProductName.slice(0, 20)}
+                    </h1>
                     <Rate
                       disabled
                       defaultValue={a?.AverageRating}
@@ -163,8 +234,11 @@ const BuilderPage = ({ builderData }) => {
         </div>
 
         {builderData.PowerSupplyUnit ? (
-          <button onClick={() => dispatch(removeBuilder("PowerSupplyUnit"))}>
-            <ImCross />
+          <button
+            className="hidden sm:block"
+            onClick={() => dispatch(removeBuilder("PowerSupplyUnit"))}
+          >
+            <ImCross className="text-red-400" />
           </button>
         ) : (
           <Link
@@ -181,15 +255,30 @@ const BuilderPage = ({ builderData }) => {
           <h1>
             Storage Device<span className="text-red-600">*</span>
           </h1>
+          {builderData.StorageDevice ? (
+            <button
+              className="sm:hidden block m-auto mt-2"
+              onClick={() => dispatch(removeBuilder("StorageDevice"))}
+            >
+              <ImCross className="text-red-400" />
+            </button>
+          ) : (
+            ""
+          )}
         </div>
-        <div className=" w-[300px] p-1">
+        <div className=" sm:w-[300px] p-1">
           {builderData.StorageDevice
             ? builderData.StorageDevice.map((a) => (
-                <div key={a._id} className="flex justify-between border">
-                  <img className="w-24" src={a.Image?.[0]} />
+                <div
+                  key={a._id}
+                  className="flex flex-col  sm:flex-row sm:justify-between border"
+                >
+                  <img className="w-24 m-auto sm:m-0" src={a.Image?.[0]} />
 
                   <div>
-                    <h1>{a.ProductName.slice(0, 20)}</h1>
+                    <h1 className="sm:text-base text-xs">
+                      {a.ProductName.slice(0, 20)}
+                    </h1>
                     <Rate
                       disabled
                       defaultValue={a?.AverageRating}
@@ -202,8 +291,11 @@ const BuilderPage = ({ builderData }) => {
             : ""}
         </div>
         {builderData.StorageDevice ? (
-          <button onClick={() => dispatch(removeBuilder("StorageDevice"))}>
-            <ImCross />
+          <button
+            className="hidden sm:block"
+            onClick={() => dispatch(removeBuilder("StorageDevice"))}
+          >
+            <ImCross className="text-red-400" />
           </button>
         ) : (
           <Link
@@ -220,15 +312,30 @@ const BuilderPage = ({ builderData }) => {
           <h1>
             Monitor<span className="text-red-600">*</span>
           </h1>
+          {builderData.Monitor ? (
+            <button
+              className="sm:hidden block m-auto mt-2"
+              onClick={() => dispatch(removeBuilder("Monitor"))}
+            >
+              <ImCross className="text-red-400" />
+            </button>
+          ) : (
+            ""
+          )}
         </div>{" "}
-        <div className=" w-[300px] p-1">
+        <div className=" sm:w-[300px] p-1">
           {builderData.Monitor
             ? builderData.Monitor.map((a) => (
-                <div key={a._id} className="flex justify-between border">
-                  <img className="w-24" src={a.Image?.[0]} />
+                <div
+                  key={a._id}
+                  className="flex flex-col  sm:flex-row sm:justify-between border"
+                >
+                  <img className="w-24 m-auto sm:m-0" src={a.Image?.[0]} />
 
                   <div>
-                    <h1>{a.ProductName.slice(0, 20)}</h1>
+                    <h1 className="sm:text-base text-xs">
+                      {a.ProductName.slice(0, 20)}
+                    </h1>
                     <Rate
                       disabled
                       defaultValue={a?.AverageRating}
@@ -241,8 +348,11 @@ const BuilderPage = ({ builderData }) => {
             : ""}
         </div>
         {builderData.Monitor ? (
-          <button onClick={() => dispatch(removeBuilder("Monitor"))}>
-            <ImCross />
+          <button
+            className="hidden sm:block"
+            onClick={() => dispatch(removeBuilder("Monitor"))}
+          >
+            <ImCross className="text-red-400" />
           </button>
         ) : (
           <Link

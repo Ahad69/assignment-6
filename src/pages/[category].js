@@ -27,7 +27,7 @@ const Category = ({ myParts }) => {
   return (
     <Layout>
       <div className={style.container}>
-        <div className="bg-white w-[300px] hidden sm:block">
+        <div className="bg-white w-11/12 sm:w-[300px] sm:m-0 m-auto">
           <div className="p-2">
             <h1 className="text-lg font-bold">Stock</h1>
             <hr />
@@ -39,6 +39,7 @@ const Category = ({ myParts }) => {
             />
           </div>
         </div>
+
         <div className="sm:w-[1000px] m-auto">
           <div className="bg-white mb-5 h-[40px] flex justify-between items-center px-2">
             <p className="font-bold">
