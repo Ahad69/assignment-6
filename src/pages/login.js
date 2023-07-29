@@ -67,7 +67,9 @@ const Login = () => {
           className="text-5xl  cursor-pointer"
           onClick={() =>
             signIn("google", {
-              callbackUrl: "http://localhost:3000/",
+              callbackUrl: `${
+                router?.query?.callbackUrl ? router?.query?.callbackUrl : "/"
+              }`,
             })
           }
         />
