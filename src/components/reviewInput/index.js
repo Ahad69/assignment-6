@@ -19,7 +19,7 @@ const ReviewsInput = ({ id }) => {
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/review/${id}`,
+        `https://assignment-6-backend.vercel.app/review/${id}`,
         review
       );
 

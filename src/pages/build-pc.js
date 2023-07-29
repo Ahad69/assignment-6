@@ -38,7 +38,7 @@ const BuildPc = () => {
                 onClick={() =>
                   message.open({
                     type: "success",
-                    content: "This is a success message",
+                    content: "Successfully Added All Part To Build A PC",
                   })
                 }
               >
