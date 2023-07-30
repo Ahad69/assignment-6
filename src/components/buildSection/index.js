@@ -41,7 +41,13 @@ const BuilderPage = ({ builderData }) => {
                   key={a._id}
                   className="flex flex-col  sm:flex-row sm:justify-between border"
                 >
-                  <img className="w-24 m-auto sm:m-0" src={a.Image?.[0]} />
+                  <Image
+                    width={24}
+                    height={24}
+                    alt=""
+                    className="w-24 m-auto sm:m-0"
+                    src={a.Image?.[0]}
+                  />
 
                   <div>
                     <h1 className="sm:text-base text-xs">
@@ -100,7 +106,13 @@ const BuilderPage = ({ builderData }) => {
                   key={a._id}
                   className="flex flex-col  sm:flex-row sm:justify-between border"
                 >
-                  <img className="w-24 m-auto sm:m-0" src={a.Image?.[0]} />
+                  <Image
+                    width={24}
+                    height={24}
+                    alt=""
+                    className="w-24 m-auto sm:m-0"
+                    src={a.Image?.[0]}
+                  />
 
                   <div>
                     <h1 className="sm:text-base text-xs">
@@ -157,7 +169,13 @@ const BuilderPage = ({ builderData }) => {
                   key={a._id}
                   className="flex flex-col  sm:flex-row sm:justify-between border"
                 >
-                  <img className="w-24 m-auto sm:m-0" src={a.Image?.[0]} />
+                  <Image
+                    width={24}
+                    height={24}
+                    alt=""
+                    className="w-24 m-auto sm:m-0"
+                    src={a.Image?.[0]}
+                  />
 
                   <div>
                     <h1 className="sm:text-base text-xs">
@@ -216,7 +234,13 @@ const BuilderPage = ({ builderData }) => {
                   key={a._id}
                   className="flex flex-col  sm:flex-row sm:justify-between border"
                 >
-                  <img className="w-24 m-auto sm:m-0" src={a.Image?.[0]} />
+                  <Image
+                    width={24}
+                    height={24}
+                    alt=""
+                    className="w-24 m-auto sm:m-0"
+                    src={a.Image?.[0]}
+                  />
 
                   <div>
                     <h1 className="sm:text-base text-xs">
@@ -274,7 +298,13 @@ const BuilderPage = ({ builderData }) => {
                   key={a._id}
                   className="flex flex-col  sm:flex-row sm:justify-between border"
                 >
-                  <img className="w-24 m-auto sm:m-0" src={a.Image?.[0]} />
+                  <Image
+                    width={24}
+                    height={24}
+                    alt=""
+                    className="w-24 m-auto sm:m-0"
+                    src={a.Image?.[0]}
+                  />
 
                   <div>
                     <h1 className="sm:text-base text-xs">
