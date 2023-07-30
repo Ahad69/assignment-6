@@ -3,6 +3,7 @@ import ReviewsInput from "@/components/reviewInput";
 import MyReviews from "@/components/reviews";
 import { addToCart, removeOne } from "@/redux/cartSlice/cartSlice";
 import { Rate } from "antd";
+import Image from "next/image";
 import React from "react";
 import { useDispatch } from "react-redux";
 
@@ -14,7 +15,13 @@ const ProductDetails = ({ myParts }) => {
       <div className="sm:w-[1280px] m-auto ">
         <div className="flex flex-col sm:justify-between sm:flex-row ">
           <div className="bg-red-400 sm:w-[440px] flex justify-end">
-            <img className="" src={myParts?.Image?.[0]} />
+            <Image
+              width={440}
+              height={250}
+              alt="image1"
+              className=""
+              src={myParts?.Image?.[0]}
+            />
           </div>
           <div className="bg-white sm:w-[840px] py-5 sm:px-10 px-4">
             <h1 className="text-3xl">{myParts?.ProductName}</h1>
@@ -120,7 +127,9 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const { params } = context;
-  const res = await fetch(`https://assignment-6-backend.vercel.app/signle-pc/${params.id}`);
+  const res = await fetch(
+    `https://assignment-6-backend.vercel.app/signle-pc/${params.id}`
+  );
   const data = await res.json();
 
   return {

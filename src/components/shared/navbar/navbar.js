@@ -6,6 +6,7 @@ import { BiSolidChevronDown } from "react-icons/bi";
 import { signOut, useSession } from "next-auth/react";
 import { SlLogin } from "react-icons/sl";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const router = useRouter();
@@ -48,10 +49,13 @@ const Navbar = () => {
         </div>
         <div className="mr-3 sm:hidden block">
           {session ? (
-            <img
+            <Image
+              width={12}
+              height={12}
               className="w-12 rounded-full cursor-pointer"
               src={session.user.image}
               onClick={() => signOut()}
+              alt="avater"
             />
           ) : (
             <Link href={"/login"}>

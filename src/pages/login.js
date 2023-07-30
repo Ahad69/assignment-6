@@ -20,6 +20,7 @@ const Login = () => {
         height={200}
         className="w-[250px] m-auto mb-10"
         src={"/logo.png"}
+        alt="logo"
       />
       <div className="flex justify-center items-center">
         <Form name="basic" onFinish={onFinish} autoComplete="off">

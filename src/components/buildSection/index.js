@@ -10,6 +10,7 @@ import { GiProcessor } from "react-icons/gi";
 import { MdStorage } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { ImCross } from "react-icons/im";
+import Image from "next/image";
 
 const BuilderPage = ({ builderData }) => {
   const dispatch = useDispatch();
@@ -330,7 +331,13 @@ const BuilderPage = ({ builderData }) => {
                   key={a._id}
                   className="flex flex-col  sm:flex-row sm:justify-between border"
                 >
-                  <img className="w-24 m-auto sm:m-0" src={a.Image?.[0]} />
+                  <Image
+                    width={24}
+                    height={50}
+                    alt=""
+                    className="w-24 m-auto sm:m-0"
+                    src={a.Image?.[0]}
+                  />
 
                   <div>
                     <h1 className="sm:text-base text-xs">

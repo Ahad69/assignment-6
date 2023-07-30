@@ -1,6 +1,7 @@
 import BuilderPage from "@/components/buildSection";
 import Layout from "@/components/layout/layout";
 import { message } from "antd";
+import Image from "next/image";
 import React from "react";
 import { useSelector } from "react-redux";
 
@@ -27,7 +28,13 @@ const BuildPc = () => {
     <Layout>
       <div className="sm:w-[1200px] m-auto bg-white">
         <div className="flex sm:justify-between items-center ">
-          <img className="w-[200px]" src="/logo.png" />
+          <Image
+            width={200}
+            height={80}
+            alt="logo"
+            className="w-[200px]"
+            src="/logo.png"
+          />
           <div className="w-[180px] border text-center h-[80px] text-black rounded">
             Parts Selected : {categoryCount}
             <br />

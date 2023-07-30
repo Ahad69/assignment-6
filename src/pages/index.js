@@ -6,7 +6,7 @@ import Cards from "@/components/cards/cards";
 import Sliders from "@/components/slider/slider";
 import Category from "@/components/categorySection/category";
 
-export default function Home({ myParts }) {
+export default function Home({ myParts, category }) {
   return (
     <>
       <Head>
@@ -31,7 +31,7 @@ export default function Home({ myParts }) {
           </div>
         </div>
 
-        <Category />
+        <Category category={category} />
       </Layout>
     </>
   );
@@ -39,11 +39,16 @@ export default function Home({ myParts }) {
 
 export const getStaticProps = async () => {
   const res = await fetch("https://assignment-6-backend.vercel.app/all");
+  const categories = await fetch(
+    "https://assignment-6-backend.vercel.app/all-category"
+  );
   const data = await res.json();
+  const category = await categories.json();
 
   return {
     props: {
       myParts: data.data,
+      category,
     },
     revalidate: 60,
   };

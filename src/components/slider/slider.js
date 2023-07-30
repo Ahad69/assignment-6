@@ -6,6 +6,7 @@ import {
   IoIosArrowDroprightCircle,
 } from "react-icons/io";
 import Link from "next/link";
+import Image from "next/image";
 
 const CustomPrevArrow = (props) => {
   const { onClick } = props;
@@ -41,13 +42,23 @@ const Sliders = () => {
     <div className={style.container}>
       <Slider {...settings}>
         <div className={style.images}>
-          <img src="/image1.jpg" />
+          <Image width={1280} height={500} alt="image1" src="/image1.jpg" />
         </div>
         <div className={style.images}>
-          <img src="https://wallpaperaccess.com/full/1325090.jpg" />
+          <Image
+            width={1280}
+            height={500}
+            alt="image1"
+            src="https://wallpaperaccess.com/full/1325090.jpg"
+          />
         </div>
         <div className={style.images}>
-          <img src="https://wallpaperaccess.com/full/4625699.jpg" />
+          <Image
+            width={1280}
+            height={500}
+            alt="image1"
+            src="https://wallpaperaccess.com/full/4625699.jpg"
+          />
         </div>
       </Slider>
     </div>
