@@ -1,38 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My project's name is  [My PC Center](https://assignment-6-one.vercel.app/)
 
-## Getting Started
+## Description
+* I build my project with Next.js. <br>
+* I have used Tailwind as CSS library. <br>
+* I have used redux toolkit for storing data and redux persists to store data for a long time. <br>
+* I have used ant design as a component library. <br>
+* I have used getStaticProps and getServerSide for fetching data. <br>
+* Every page of my site is responsive for desktop and mobile. <br>
+* It's absolutely user-friendly. <br>
+* Users can navigate between pages by the navigation menu.<br>
+* It has some protected page which is available only for logged-in users.
+* 
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Features
+* Users can filter products by sorting by status.<br>
+* Users can log in via GitHub and Google.<br>
+* Users can build their pc on the PC Build page.<br>
+* Users can't go to the PC Build page without logged-in.<br>
+* Users can select pc parts on the PC Build page to complete the order.<br>
+* Users can add to the cart.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## How to run the project
+You have to hit the link [My PC Center](https://assignment-6-one.vercel.app/) to run my project in your browser. <br>
+You will see some random products and by clicking them you can see details of them.<br>
+You have to select a category to see products according to category.<br>
+You can build your pc by selecting parts in the PC Build page. after selecting one you can remove it. and select again.<br>
+By selecting all parts you can complete order. 
