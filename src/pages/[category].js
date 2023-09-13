@@ -61,7 +61,7 @@ const Category = ({ myParts }) => {
 export default Category;
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`https://assignment-6-backend.vercel.app/all`);
+  const res = await fetch(`http://localhost:5000/all`);
   const data = await res.json();
 
   const paths = data?.data?.map((a) => ({
@@ -78,7 +78,7 @@ export const getStaticProps = async (context) => {
   const { params } = context;
   const sort = params.category.split("&")[1];
   const res = await fetch(
-    `https://assignment-6-backend.vercel.app/category?cat=${params.category}&stock=${sort}`
+    `http://localhost:5000/category?cat=${params.category}&stock=${sort}`
   );
   const data = await res.json();
 

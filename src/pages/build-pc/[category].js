@@ -63,7 +63,7 @@ export async function getServerSideProps({ params }) {
   const sort = params?.category?.split("&")[1];
 
   const res = await fetch(
-    `https://assignment-6-backend.vercel.app/category?cat=${params.category}&stock=${sort}`
+    `http://localhost:5000/category?cat=${params.category}&stock=${sort}`
   );
   const posts = await res.json();
 

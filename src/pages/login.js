@@ -8,9 +8,12 @@ import { useRouter } from "next/router";
 
 const Login = () => {
   const router = useRouter();
-  console.log(router.query.callbackUrl);
-  const onFinish = (values) => {
-    console.log("Success:", values);
+  const onFinish = async (values) => {
+    const result = await signIn("credentials", {
+      email: values.username,
+      password: values.password,
+      callbackUrl: "/dashboard",
+    });
   };
 
   return (

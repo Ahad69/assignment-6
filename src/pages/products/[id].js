@@ -112,7 +112,7 @@ const ProductDetails = ({ myParts }) => {
 export default ProductDetails;
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`https://assignment-6-backend.vercel.app/all`);
+  const res = await fetch(`http://localhost:5000/all`);
   const data = await res.json();
 
   const paths = data?.data?.map((a) => ({
@@ -127,9 +127,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const { params } = context;
-  const res = await fetch(
-    `https://assignment-6-backend.vercel.app/signle-pc/${params.id}`
-  );
+  const res = await fetch(`http://localhost:5000/signle-pc/${params.id}`);
   const data = await res.json();
 
   return {

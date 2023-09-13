@@ -2,7 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["www.startech.com.bd", "wallpaperaccess.com", "ik.imagekit.io"],
+    domains: [
+      "www.startech.com.bd",
+      "wallpaperaccess.com",
+      "ik.imagekit.io",
+      "lh3.googleusercontent.com",
+    ],
   },
 };
 

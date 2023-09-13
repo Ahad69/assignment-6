@@ -38,10 +38,8 @@ export default function Home({ myParts, category }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://assignment-6-backend.vercel.app/all");
-  const categories = await fetch(
-    "https://assignment-6-backend.vercel.app/all-category"
-  );
+  const res = await fetch("http://localhost:5000/all");
+  const categories = await fetch("http://localhost:5000/all-category");
   const data = await res.json();
   const category = await categories.json();
 
